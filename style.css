@@ -1,186 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
 }
 
+html,
 body {
-  background-color: #000000;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
-.historia {
+/* CABEÇALHO */
+.cabecalho {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-around;
+  padding: 35px;
+  position: relative;
 }
+
+.cabecalho-menu {
+  display: flex;
+  gap: 25px;
+}
+
+/*EFEITO DO CABEÇALHO*/
+nav a {
+  color: #000000;
+  font-size: 18px;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  width: 0%;
+  height: 1.5px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* SESSÃO SOBRE */
 
 .sobre {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex: 1;
-  padding: 50px;
-}
-
-.image-container {
-  /*padding: 50px*/
-  width: 50px;
-}
-
-.image-container img {
-  width: 50%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-  padding: 50px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  font-family: 'Roboto', sans-serif; /* Adicionei a fonte Roboto */
-  background: #23232e;
-  height: 8vh;
+  flex-flow: row;
+  flex-direction: row;
+  align-content: flex-start;
+  margin-bottom: 20px;
 }
 
-composicoes {
+.texto-sobre {
+  padding: 35px;
+  font-size: 15px;
+}
+
+.imagem-sobre img {
+  max-width: 95%;
+  height: auto;
+  padding: auto;
+}
+
+/* SESSÃO COMPOSIÇÕES*/
+
+.composicao {
   display: flex;
-  align-items: center; /* Alinha os itens verticalmente no centro */
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  flex-direction: row;
+  align-content: flex-start;
+  margin-top: 20px;
 }
 
-.image-container {
-  width: 30%; /* Largura para a imagem */
+.imagem-composicao img {
+  max-width: 87%;
+  height: auto;
+  padding: auto;
+  margin-left: 35px;
 }
 
-.image-container img {
-  width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-}
-
-.text-container {
-  width: 50%; /* Largura para o texto */
-  padding: 20px; /* Adapte o espaçamento conforme necessário */
-}
-
-/* Estilos adicionais para ajustar a aparência, como alinhamento de texto, etc. */
-.text-container h2,
-.text-container p {
+.texto-composicao {
+  padding: 35px;
+  font-size: 12px;
   text-align: left;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: 'Roboto', sans-serif; /* Adicionei a fonte Roboto */
-  background: #23232e;
-  height: 8vh;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
-  background: #23232e;
-  height: 8vh;
-}
-
-main {
-  background: url('bg.jpg') no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-}
-
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
-}
-
-@media (max-width: 999px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-  .mobile-menu {
-    display: block;
-  }
-}
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
 }

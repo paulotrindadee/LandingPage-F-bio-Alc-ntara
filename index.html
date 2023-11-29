@@ -5,75 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fábio Alcantara</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      as="style"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <script src="script/scroll.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <a class="logo" href="/">Fábio Alcântara</a>
-        <div class="mobile-menu">
-          <div class="line1" alt="Line 1"></div>
-          <div class="line2" alt="Line 2"></div>
-          <div class="line3" alt="Line 3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
+    <header class="cabecalho">
+      <a class="logo" href="/">Fábio Alcântara</a>
+      <nav class="cabecalho-menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#composicoes">Composições</a>
+        <a href="#contato">Contato</a>
       </nav>
     </header>
 
-    <div class="historia">
-      <section class="sobre">
-        <h4>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a,
-          iste deserunt odit laboriosam, eos recusandae beatae, cum sed
-          perspiciatis laborum dolor quibusdam exercitationem. Omnis voluptate
-          recusandae doloribus quidem non..Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Mollitia a, iste deserunt odit
-          laboriosam, eos recusandae beatae, cum sed perspiciatis laborum dolor
-          quibusdam exercitationem. Omnis voluptate recusandae doloribus quidem
-          non..
-        </h4>
-      </section>
-      <div class="image-container">
-        <img src="/img/fabiorevista.jpg" alt="" />
+    <section class="sobre" id="sobre">
+      <div class="texto-sobre">
+        <h1> Quem é Fábio Alcântara?</h1>
+          <p>
+            Fábio Alcântara, guitarrista, compositor e arranjador, nascido em
+            Salvador-Ba. Fez parte da banda Motumbá, acompanhou a artista Magary
+            Lord durante 8 anos, juntos ganharam o carnaval de 2012 com a música
+            "Circulou" em parceria com Leonardo Reis.
+          </p>
+          <p>
+            É compositor da música "Largadinho e Tarraxinha" em parceria com
+            Samir e Duller, músicas que foram gravadas por Cláudia Leite.
+            Produziu e arranjou o cd INVENTANDO MODA pela Universal juntamente
+            com Magary e Leonardo Reis.
+          </p>
+          <p>
+            Participou do festival de Jazz em New Orleans HERITAGE FESTIVAL em
+            2013 com Magary Lord. No ano de 2014 dividiu o palco com Carlos
+            Santana em uma festa organizada pela FIFA acompanhando Cláudia
+            Leitte.
+          </p>
+          <p>
+            Atualmente Fábio é guitarrista e violonista da cantora Cláudia
+            Leitte com quem viaja pelo Brasil e exterior.
+          </p>
+        </h1>
       </div>
-    </div>
-
-    <section class="composicoes">
-      <div class="image-container">
-        <img src="/img/fabiorevistaempe.jpg" alt="Foto do Compositor" />
+      <div class="imagem-sobre">
+        <img src="/img/fabiorevista.jpg" alt="/" />
       </div>
-      <h4>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        minima dolores rerum aliquam hic, pariatur ea ducimus modi sequi
-        voluptatibus tempora sunt recusandae placeat ipsam similique sit, nobis
-        reprehenderit dolore! Lorem ipsum dolor sit, amet consectetur
-        adipisicing elit. Libero consequuntur aliquam neque nihil, nulla, sequi
-        suscipit veritatis adipisci assumenda architecto nesciunt porro sit
-        pariatur dolorem nemo ullam quisquam sed voluptatibus!.
-      </h4>
     </section>
 
-    <section class="contatos">
-      <h2>Contatos</h2>
-      <p>Forneça informações de contato, como e-mail, redes sociais, etc.</p>
+    <section class="composicao" id="composicoes">
+      <div class="imagem-composicao">
+        <img src="/img/fabiorevistaempe.jpg" alt="/" />
+      </div>
+      <div>
+        <h1>Algumas de suas composições.</h1>
+        <p>
+          <br>
+            <p>
+              Largadinho(Fábio Alcântara/Samir/Duller),
+              Tarraxinha(Fábio Alcântara/Samir/Duller),
+              Desafio(Duller/Tonho Copque/Fábio Alcântara/Xanddy),
+            </p>
+            <p>
+              Matimba(Cláudia Leitte/Fábio Alcântara/Luciano Pinto/Duller/Samir),
+              A Galera(Augusto Conceição/Fábio Alcântara/Elivandro Cuca/Rayala/Sá Trindade),
+              Balanço Legal(Elivandro Cuca/Fábio Alcântara/Augusto Conceição),
+            </p>
+            <p>
+              Tum Tum Dois Corações(Elivandro Cuca/Luzania Passos/Lais Copque/Fábio Alcântara),
+              Brasileiro(Augusto Conceição/Duller/Fábio Alcântara),
+              Caldeirão(Fábio Alcântara/Raimundo Bahia/Elivandro Cuca/Augusto Conceição),
+            </p>
+            <p>
+              Rasta Man(Fábio Alcântara/Augusto Conceição/Duller),
+              Caminhão da Alegria(Elivandro Cuca/Fábio Alcântara/Augusto Conceição/Duller),
+              No Balançar Da Maré(Duller/Fábio Alcântara/Augusto Conceição/Kátia Rodeiro).
+            </p>
+          </br>
+        </p>
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2023 Fábio Alcântara. Todos os direitos reservados.</p>
-    </footer>
+    <section class="contato" id="contato">
+      
+    </section>
 
-    <script src="navbar.js"></script>
+
   </body>
 </html>
