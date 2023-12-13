@@ -107,10 +107,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-flow: row;
-  flex-direction: row;
-  align-content: flex-start;
-  margin-bottom: 20px;
 }
 
 .texto-sobre {
@@ -119,9 +115,8 @@ header {
 }
 
 .imagem-sobre img {
-  max-width: 95%;
-  height: auto;
-  padding: auto;
+  max-width: 100%;
+  padding: 80px;
 }
 
 /* SESSÃO COMPOSIÇÕES*/
@@ -139,7 +134,7 @@ header {
 .imagem-composicao img {
   max-width: 87%;
   height: auto;
-  padding: auto;
+  padding: 37px;
   margin-left: 35px;
 }
 
