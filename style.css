@@ -23,6 +23,7 @@ html {
 
 header {
   background-color: #000000;
+  position: fixed;
   width: 100%;
   padding: 10px;
 }
@@ -31,6 +32,29 @@ header {
   color: #808080;
   text-decoration: none;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.logo span {
+  position: relative;
+}
+
+.logo span::before {
+  content: '';
+  color: #ffffff;
+  animation: palavras 7s infinite;
+}
+
+.logo span::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid #ffffff;
+  right: -1.8px;
+  animation: cursor 2s infinite, digita 9s steps(10) infinite;
+  width: calc(88% + 15px);
+  background-color: #000000;
 }
 
 .logo,
@@ -82,25 +106,6 @@ header {
   color: #ffffff;
 }
 
-/* .logo:hover {
-  color: #000000;
-  font-size: 18px;
-  position: relative;
-}
-
-.logo::after {
-  content: '';
-  width: 0%;
-  height: 1.5px;
-  background-color: #000000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 0.4s ease-in-out;
-} */
-
-/*EFEITO NO HEADER LINKS */
-
 /* SESSÃO SOBRE */
 
 .sobre {
@@ -109,14 +114,18 @@ header {
   align-items: center;
 }
 
+/* Texto da sessão SOBRE */
 .texto-sobre {
   padding: 35px;
   font-size: 15px;
 }
 
-.imagem-sobre img {
-  max-width: 100%;
-  padding: 80px;
+/* Imagem da sessão SOBRE */
+.img-sobre img {
+  margin: 45px;
+  width: 510px;
+  padding: 37px;
+  margin-left: 35px;
 }
 
 /* SESSÃO COMPOSIÇÕES*/
@@ -132,7 +141,8 @@ header {
 }
 
 .imagem-composicao img {
-  max-width: 87%;
+  margin: 45px;
+  width: 510px;
   height: auto;
   padding: 37px;
   margin-left: 35px;
@@ -142,4 +152,50 @@ header {
   padding: 35px;
   font-size: 12px;
   text-align: left;
+}
+
+@keyframes palavras {
+  0%,
+  20% {
+    content: 'Fábio Alcântara';
+  }
+  21%,
+  40% {
+    content: 'Música é vida!';
+  }
+  41%,
+  80% {
+    content: 'Música é saúde!';
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid #ffffff;
+  }
+}
+
+@keyframes digita {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(88% + 15px);
+  }
 }
